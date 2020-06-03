@@ -28,14 +28,14 @@ public class FooterLinks {
 	@FindBy(linkText = "Advertise with us")
 	WebElement AdvertiseWithUs;
 	
-	public void verifyFooterLinks()
+	public void verifyFooterLinks() throws InterruptedException
 	{
 		Assert.assertEquals(AboutUs.isDisplayed()&& AboutUs.isEnabled(), true);
 		Assert.assertEquals(ContactUs.isDisplayed()&& ContactUs.isEnabled(), true);
 		Assert.assertEquals(Terms.isDisplayed()&& Terms.isEnabled(), true);
 		Assert.assertEquals(PrivacyPolicy.isDisplayed()&& PrivacyPolicy.isEnabled(), true);
-		Assert.assertEquals(AdvertiseWithUs.isDisplayed()&& AdvertiseWithUs.isEnabled(), true);
-		
-		System.out.println("All the footer links are displaed and clickable.");
+		Assert.assertEquals(AdvertiseWithUs.isDisplayed()&& AdvertiseWithUs.isEnabled(), true);		
+		Thread.sleep(500);
+		System.out.println("All the footer links are displayed and clickable.");
 	}
 }

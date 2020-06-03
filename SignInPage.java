@@ -20,7 +20,7 @@ public class SignInPage {
 		String ExpectedTitle = "Logon | Jobs.Economist.com";
 		String ActualTitle =driver.getTitle();
 		Assert.assertEquals(ExpectedTitle, ActualTitle);
-		Thread.sleep(5000);
+		Thread.sleep(500);
 		
 		System.out.println("Sign in page verified, page name is:" + ActualTitle);
 	}

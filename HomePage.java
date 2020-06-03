@@ -91,15 +91,17 @@ public class HomePage {
 	
 	public void clickHomeTab() throws InterruptedException 
 	{
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		home.click();
+		System.out.println("Home Page link verified");
+		Thread.sleep(500);
 	}
 	
 	public void verifyhometab() throws InterruptedException 
 	{
 		String ExpectedTitle = "Jobs.Economist.com | jobs | Choose from 30 live vacancies";
 		Assert.assertEquals(ExpectedTitle, ActualTitle);
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		
 		System.out.println("Home page verified, page name is:" + ActualTitle);
 	}
@@ -110,7 +112,7 @@ public class HomePage {
 		jobTitle.sendKeys(Text);
 		SearchBtn.click();
 		
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		
 		if(SearchedJobs.getText().contains(Text))
 		{
@@ -122,7 +124,7 @@ public class HomePage {
 	public void verifyViewDetailsPage() throws InterruptedException
 	{
 		ViewDetailsTab.click();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		// verify that Apply button is shown
 		Assert.assertEquals(ApplyBtn.isDisplayed()&& ApplyBtn.isEnabled(), true);
 		

@@ -23,12 +23,12 @@ public class economistTest {
 		obj.SectorDisplayed();
 		obj.FooterDisplayed();
 		
-		Thread.sleep(1000);
+		Thread.sleep(500);
 
 		//click sign in link
 		obj.clickSignin();
 		
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		//verify Sign in page
 		
 		SignInPage page = new SignInPage(driver);		
@@ -78,7 +78,8 @@ public class economistTest {
 		
 		//Verify that job details can be accessed
 		obj.verifyViewDetailsPage();
-				
+			
+		driver.close();
 	}
 
 }

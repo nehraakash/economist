@@ -26,7 +26,7 @@ public class FindAJobPage {
 	public void clickAndVerifyFindJob(WebDriver driver) throws InterruptedException 
 	{
 		FindJob.click();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		String ActualTitle =driver.getTitle();
 		Assert.assertEquals(PageHeading.isDisplayed(), true);
 		System.out.println("Find a job page verified, page name is:" + ActualTitle);

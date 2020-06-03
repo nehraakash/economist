@@ -23,7 +23,7 @@ public class JobsBLog {
 	public void clickSearchRecruitersAndVerifyPage(WebDriver driver) throws InterruptedException
 	{
 		String ActualTitle =driver.getTitle();
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		
 		Assert.assertEquals(JobsBlogHeading.isDisplayed(), true);
 		System.out.println("Jobs Blog page verified, page name is:" + ActualTitle);
